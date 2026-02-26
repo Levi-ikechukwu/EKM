@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@layer base {
+  :root {
+    --background: #ffffff; /* pure white background */
+    --foreground: #0f172a; /* slate-900 for default text */
+    --primary: #1e3a8a; /* deep blue for enterprise brand */
+    --primary-foreground: #ffffff;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: "Montserrat", system-ui, sans-serif;
+  }
+}
