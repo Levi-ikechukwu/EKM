@@ -1,4 +1,5 @@
 import AboutImage from "../../assets/About.png";
+import { motion } from "framer-motion";
 
 export default function AboutSection() {
   const points = [
@@ -8,12 +9,31 @@ export default function AboutSection() {
     "Quality & Compliance Assurance",
   ];
 
+  const listVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15, delayChildren: 0.3 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
-    <section className="pt-8 pb-16 md:pt-12 md:pb-24 w-full bg-white">
+    <section className="pt-8 pb-16 md:pt-12 md:pb-24 w-full bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-0 items-center">
           {/* Content Column */}
-          <div className="order-2 lg:order-1 flex flex-col md:ml-8 lg:ml-12">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="order-2 lg:order-1 flex flex-col md:ml-8 lg:ml-12"
+          >
             <h3 className="text-gray-500 font-semibold tracking-widest text-[13px] uppercase mb-4">
               About EKM
             </h3>
@@ -35,9 +55,19 @@ export default function AboutSection() {
             </p>
 
             {/* Checkmarks Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4 mb-10">
+            <motion.div
+              variants={listVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4 mb-10"
+            >
               {points.map((point, idx) => (
-                <div key={idx} className="flex items-center">
+                <motion.div
+                  key={idx}
+                  variants={itemVariants}
+                  className="flex items-center"
+                >
                   <svg
                     className="w-5 h-5 mr-3 text-[#333333] shrink-0"
                     fill="none"
@@ -55,26 +85,36 @@ export default function AboutSection() {
                   <span className="text-[#1a3b5c] font-medium text-[15px] sm:text-[16px]">
                     {point}
                   </span>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
 
             {/* Button */}
             <div>
-              <button className="px-8 py-3.5 bg-[#1a3b5c] hover:bg-[#122a42] text-white font-medium rounded transition-all duration-300 shadow hover:shadow-lg text-[15px]">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-3.5 bg-[#1a3b5c] hover:bg-[#122a42] text-white font-medium rounded transition-colors duration-300 shadow hover:shadow-lg text-[15px]"
+              >
                 View Our Services
-              </button>
+              </motion.button>
             </div>
-          </div>
+          </motion.div>
 
           {/* Image Column */}
-          <div className="order-1 lg:order-2 w-full flex items-center justify-center lg:justify-end">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className="order-1 lg:order-2 w-full flex items-center justify-center lg:justify-end"
+          >
             <img
               src={AboutImage}
               alt="Engineering and Industrial Support"
-              className="w-full max-w-[550px] aspect-3/2 object-cover object-center rounded shadow-md"
+              className="w-full max-w-[550px] aspect-3/2 object-cover object-center rounded shadow-md hover:shadow-xl transition-shadow duration-500"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

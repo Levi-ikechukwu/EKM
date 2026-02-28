@@ -4,12 +4,65 @@ import imgAbout from "../../assets/About.png";
 import img3 from "../../assets/img3.png";
 import img4 from "../../assets/img4.png";
 import img55 from "../../assets/img55.png";
+import { motion } from "framer-motion";
 
 export default function ServicesSection() {
+  const services = [
+    {
+      img: img1,
+      title: "Technical Sourcing and Industrial Procurement",
+      desc: "Strategic sourcing of mechanical, electrical, and civil materials in line with project specifications and regulatory standards.",
+    },
+    {
+      img: img2,
+      title: "Local and International Sourcing",
+      desc: "Local and global supplier network coordination ensuring competitive pricing, quality assurance, and regulatory conformity.",
+    },
+    {
+      img: imgAbout,
+      title: "Materials Expediting and Logistics Coordination",
+      desc: "Active tracking, inspection coordination, and delivery scheduling to ensure timely project execution.",
+    },
+    {
+      img: img3,
+      title: "Project Supply Chain Management",
+      desc: "End-to-end procurement lifecycle management from sourcing through delivery and documentation closure.",
+    },
+    {
+      img: img4,
+      title: "Construction and Industrial Materials Supply",
+      desc: "Supply of certified construction materials and industrial components meeting local and international standards.",
+    },
+    {
+      img: img55,
+      title: "Procurement Process Management",
+      desc: "End-to-end management of procurement workflows from requisition to delivery, ensuring transparency, accountability, and operational efficiency.",
+    },
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15 },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
   return (
-    <section className="py-16 md:py-24 bg-gray-50 w-full">
+    <section className="py-16 md:py-24 bg-gray-50 w-full overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-4xl mx-auto mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+          className="text-center max-w-4xl mx-auto mb-16"
+        >
           <h2 className="text-[#bf714a] font-bold tracking-widest text-lg sm:text-xl md:text-2xl uppercase mb-4">
             Our Core Service Areas
           </h2>
@@ -24,107 +77,41 @@ export default function ServicesSection() {
             solutions tailored to industrial, construction, and energy sector
             projects.
           </p>
-        </div>
+        </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-10 md:gap-y-16 md:gap-x-14">
-          {/* Card 1 */}
-          <div className="flex flex-col text-center">
-            <img
-              src={img1}
-              alt="Technical Sourcing and Industrial Procurement"
-              className="w-full h-[220px] sm:h-[260px] md:h-[280px] object-cover mb-6"
-            />
-            <h4 className="text-[20px] md:text-[22px] font-semibold text-[#1a3b5c] mb-3 md:mb-4 px-2">
-              Technical Sourcing and Industrial Procurement
-            </h4>
-            <p className="text-[#2b4c6e] text-[15px] md:text-[16px] leading-relaxed px-4 md:px-6">
-              Strategic sourcing of mechanical, electrical, and civil materials
-              in line with project specifications and regulatory standards.
-            </p>
-          </div>
-
-          {/* Card 2 */}
-          <div className="flex flex-col text-center">
-            <img
-              src={img2}
-              alt="Local and International Sourcing"
-              className="w-full h-[220px] sm:h-[260px] md:h-[280px] object-cover mb-6"
-            />
-            <h4 className="text-[20px] md:text-[22px] font-semibold text-[#1a3b5c] mb-3 md:mb-4 px-2">
-              Local and International Sourcing
-            </h4>
-            <p className="text-[#2b4c6e] text-[15px] md:text-[16px] leading-relaxed px-4 md:px-6">
-              Local and global supplier network coordination ensuring
-              competitive pricing, quality assurance, and regulatory conformity.
-            </p>
-          </div>
-
-          {/* Card 3 */}
-          <div className="flex flex-col text-center">
-            <img
-              src={imgAbout}
-              alt="Materials Expediting and Logistics Coordination"
-              className="w-full h-[220px] sm:h-[260px] md:h-[280px] object-cover mb-6"
-            />
-            <h4 className="text-[20px] md:text-[22px] font-semibold text-[#1a3b5c] mb-3 md:mb-4 px-2">
-              Materials Expediting and Logistics Coordination
-            </h4>
-            <p className="text-[#2b4c6e] text-[15px] md:text-[16px] leading-relaxed px-4 md:px-6">
-              Active tracking, inspection coordination, and delivery scheduling
-              to ensure timely project execution.
-            </p>
-          </div>
-
-          {/* Card 4 */}
-          <div className="flex flex-col text-center">
-            <img
-              src={img3}
-              alt="Project Supply Chain Management"
-              className="w-full h-[220px] sm:h-[260px] md:h-[280px] object-cover mb-6"
-            />
-            <h4 className="text-[20px] md:text-[22px] font-semibold text-[#1a3b5c] mb-3 md:mb-4 px-2">
-              Project Supply Chain Management
-            </h4>
-            <p className="text-[#2b4c6e] text-[15px] md:text-[16px] leading-relaxed px-4 md:px-6">
-              End-to-end procurement lifecycle management from sourcing through
-              delivery and documentation closure.
-            </p>
-          </div>
-
-          {/* Card 5 */}
-          <div className="flex flex-col text-center">
-            <img
-              src={img4}
-              alt="Construction and Industrial Materials Supply"
-              className="w-full h-[220px] sm:h-[260px] md:h-[280px] object-cover mb-6"
-            />
-            <h4 className="text-[20px] md:text-[22px] font-semibold text-[#1a3b5c] mb-3 md:mb-4 px-2">
-              Construction and Industrial Materials Supply
-            </h4>
-            <p className="text-[#2b4c6e] text-[15px] md:text-[16px] leading-relaxed px-4 md:px-6">
-              Supply of certified construction materials and industrial
-              components meeting local and international standards.
-            </p>
-          </div>
-
-          {/* Card 6 */}
-          <div className="flex flex-col text-center">
-            <img
-              src={img55}
-              alt="Procurement Process Management"
-              className="w-full h-[220px] sm:h-[260px] md:h-[280px] object-cover mb-6"
-            />
-            <h4 className="text-[20px] md:text-[22px] font-semibold text-[#1a3b5c] mb-3 md:mb-4 px-2">
-              Procurement Process Management
-            </h4>
-            <p className="text-[#2b4c6e] text-[15px] md:text-[16px] leading-relaxed px-4 md:px-6">
-              End-to-end management of procurement workflows from requisition to
-              delivery, ensuring transparency, accountability, and operational
-              efficiency.
-            </p>
-          </div>
-        </div>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-10 md:gap-y-16 md:gap-x-14"
+        >
+          {services.map((service, idx) => (
+            <motion.div
+              key={idx}
+              variants={cardVariants}
+              whileHover={{ y: -8 }}
+              className="flex flex-col text-center group cursor-pointer"
+            >
+              <div className="overflow-hidden rounded-md mb-6 shadow-sm group-hover:shadow-md transition-shadow duration-300">
+                <motion.img
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.4 }}
+                  src={service.img}
+                  alt={service.title}
+                  className="w-full h-[220px] sm:h-[260px] md:h-[280px] object-cover"
+                />
+              </div>
+              <h4 className="text-[20px] md:text-[22px] font-semibold text-[#1a3b5c] mb-3 md:mb-4 px-2 group-hover:text-[#2b4c6e] transition-colors duration-300">
+                {service.title}
+              </h4>
+              <p className="text-[#2b4c6e] text-[15px] md:text-[16px] leading-relaxed px-4 md:px-6">
+                {service.desc}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
