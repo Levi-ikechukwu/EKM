@@ -13,6 +13,9 @@ const Contact = () => {
     agreeToPrivacy: false,
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData((prev) => ({
@@ -21,10 +24,51 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Add logic here to send email or save to database
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "YOUR_WEB3FORMS_ACCESS_KEY", // Replace with actual access key from web3forms.com
+          name: formData.fullName,
+          company: formData.companyName,
+          phone: formData.phoneNumber,
+          email: formData.emailAddress,
+          message: formData.message,
+          subject: "New Contact Form Submission - EKM Website",
+          from_name: "EKM Contact Form",
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setSubmitStatus("success");
+        setFormData({
+          fullName: "",
+          companyName: "",
+          phoneNumber: "",
+          emailAddress: "",
+          message: "",
+          agreeToPrivacy: false,
+        });
+        setTimeout(() => setSubmitStatus(null), 5000); // clear success message after 5 seconds
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -162,10 +206,23 @@ const Contact = () => {
             <div>
               <button
                 type="submit"
-                className="px-10 py-3.5 bg-white text-[#1a3b5c] font-bold rounded hover:bg-gray-100 transition-colors duration-300 text-lg shadow-sm"
+                disabled={isSubmitting}
+                className={`px-10 py-3.5 bg-white text-[#1a3b5c] font-bold rounded hover:bg-gray-100 transition-colors duration-300 text-lg shadow-sm ${
+                  isSubmitting ? "opacity-70 cursor-not-allowed" : ""
+                }`}
               >
-                Submit
+                {isSubmitting ? "Submitting..." : "Submit"}
               </button>
+              {submitStatus === "success" && (
+                <p className="mt-4 text-green-300 font-medium tracking-wide">
+                  Message sent successfully! We will get back to you soon.
+                </p>
+              )}
+              {submitStatus === "error" && (
+                <p className="mt-4 text-red-300 font-medium tracking-wide">
+                  There was an error sending your message. Please try again.
+                </p>
+              )}
             </div>
           </form>
         </motion.div>
