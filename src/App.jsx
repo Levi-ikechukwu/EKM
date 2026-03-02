@@ -3,6 +3,9 @@ import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
+import About from "./pages/About";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
@@ -14,19 +17,10 @@ function App() {
         <main className="grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route
-              path="/about"
-              element={<div className="text-center py-20">About Us</div>}
-            />
-            <Route
-              path="/compliance"
-              element={<div className="text-center py-20">Compliance</div>}
-            />
+            <Route path="/about" element={<About />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/services" element={<Services />} />
-            <Route
-              path="/contact"
-              element={<div className="text-center py-20">Contact Us</div>}
-            />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
         <Footer />
