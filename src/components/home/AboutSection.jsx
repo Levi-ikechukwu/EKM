@@ -112,7 +112,7 @@ export default function AboutSection() {
             <img
               src={AboutImage}
               alt="Engineering and Industrial Support"
-              className="w-full max-w-[550px] aspect-3/2 object-cover object-center rounded shadow-md hover:shadow-xl transition-shadow duration-500"
+              className="w-full max-w-[480px] h-auto object-cover rounded shadow-md hover:shadow-xl transition-shadow duration-500"
             />
           </motion.div>
         </div>

@@ -1,6 +1,6 @@
 import img1 from "../../assets/img1.png";
 import img2 from "../../assets/img2.png";
-import imgAbout from "../../assets/About.png";
+import imgAbout from "../../assets/About1.png";
 import img3 from "../../assets/img3.png";
 import img4 from "../../assets/img4.png";
 import img55 from "../../assets/img55.png";
@@ -92,7 +92,7 @@ export default function ServicesSection() {
               key={idx}
               variants={cardVariants}
               whileHover={{ y: -8 }}
-              className="flex flex-col text-center group cursor-pointer"
+              className="flex flex-col text-center group cursor-pointer w-full max-w-[450px] mx-auto"
             >
               <div className="overflow-hidden rounded-md mb-6 shadow-sm group-hover:shadow-md transition-shadow duration-300">
                 <motion.img
@@ -100,7 +100,7 @@ export default function ServicesSection() {
                   transition={{ duration: 0.4 }}
                   src={service.img}
                   alt={service.title}
-                  className="w-full h-[220px] sm:h-[260px] md:h-[280px] object-cover"
+                  className="w-full h-auto object-cover"
                 />
               </div>
               <h4 className="text-[20px] md:text-[22px] font-semibold text-[#1a3b5c] mb-3 md:mb-4 px-2 group-hover:text-[#2b4c6e] transition-colors duration-300">

@@ -1,17 +1,19 @@
 import React from "react";
-import img1 from "../../assets/img1.png";
-import img2 from "../../assets/img2.png";
-import imgAbout from "../../assets/About.png";
-import img3 from "../../assets/img3.png";
-import img4 from "../../assets/img4.png";
-import img55 from "../../assets/img55.png";
+import service1 from "../../assets/service1.png";
+import service2 from "../../assets/service2.png";
+import service3 from "../../assets/service3.png";
+import service4 from "../../assets/service4.png";
+import service5 from "../../assets/service5.png";
+import service6 from "../../assets/service6.png";
+import service7 from "../../assets/service7.png";
+import service8 from "../../assets/service8.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export default function ServicesList() {
   const servicesData = [
     {
-      img: img1,
+      img: service1,
       title: "Technical Sourcing and Industrial Procurement",
       desc: "We provide structured sourcing and technical supply solutions that guarantee aligned delivery with technical specifications and project requirements.",
       deliverList: [
@@ -29,7 +31,7 @@ export default function ServicesList() {
       ],
     },
     {
-      img: img2,
+      img: service2,
       title: "Local and International Sourcing",
       desc: "We coordinate sourcing activities on both a local and international level to ensure proper supply availability and cost-efficiency.",
       deliverList: [
@@ -41,7 +43,7 @@ export default function ServicesList() {
       ],
     },
     {
-      img: imgAbout,
+      img: service3,
       title: "Materials Expediting and Logistics Coordination",
       desc: "We coordinate routing and tracking of materials and equipment, and materials to ensure proper project scheduling and efficiency.",
       deliverList: [
@@ -53,7 +55,7 @@ export default function ServicesList() {
       ],
     },
     {
-      img: img3,
+      img: service4,
       title: "Project Supply Chain Management",
       desc: "We monitor procurement timelines and routines to ensure projects follow upon project schedules.",
       deliverList: [
@@ -65,7 +67,7 @@ export default function ServicesList() {
       ],
     },
     {
-      img: img4,
+      img: service5,
       title: "Construction and Industrial Materials Supply",
       desc: "We coordinate the supply of construction and industrial materials to align with project schedules and needs.",
       deliverList: [
@@ -77,7 +79,7 @@ export default function ServicesList() {
       ],
     },
     {
-      img: img55,
+      img: service6,
       title: "Procurement Process Management",
       desc: "We maintain accountability over our businesses aligned to cost management, process integrity, and predictability.",
       deliverList: [
@@ -89,7 +91,7 @@ export default function ServicesList() {
       ],
     },
     {
-      img: img4, // Reused as per user instruction
+      img: service7,
       title: "Industrial Maintenance Support",
       desc: "EKM provides continuous support for industrial maintenance requirements across mechanical and operational systems.",
       deliverList: [
@@ -101,7 +103,7 @@ export default function ServicesList() {
       ],
     },
     {
-      img: img55, // Reused as per user instruction
+      img: service8,
       title: "General Engineering Services",
       desc: "We provide engineering support services aligned with project designs scenarios and operational requirements.",
       deliverList: [
@@ -168,7 +170,7 @@ export default function ServicesList() {
             <motion.div
               key={index}
               variants={cardVariants}
-              className="flex flex-col group"
+              className="flex flex-col group w-full max-w-[500px] mx-auto"
             >
               <div className="overflow-hidden rounded shadow-sm mb-6 group-hover:shadow-md transition-shadow duration-300">
                 <motion.img
@@ -176,7 +178,7 @@ export default function ServicesList() {
                   transition={{ duration: 0.4 }}
                   src={service.img}
                   alt={service.title}
-                  className="w-full h-[250px] sm:h-[300px] object-cover cursor-pointer"
+                  className="w-full h-auto object-cover cursor-pointer"
                 />
               </div>
               <h4 className="text-[22px] md:text-2xl font-semibold text-[#1a3b5c] mb-3 group-hover:text-[#2b4c6e] transition-colors duration-300">

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="bg-white min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+    <div className="bg-white min-h-screen pt-12 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -11,7 +11,7 @@ const PrivacyPolicy = () => {
           transition={{ duration: 0.6 }}
         >
           <div className="mb-10">
-            <h3 className="text-[#bf714a] font-bold tracking-widest text-sm uppercase mb-4">
+            <h3 className="text-[#153B61] font-bold tracking-widest text-sm uppercase mb-4">
               LEGAL
             </h3>
             <h1 className="text-3xl sm:text-4xl md:text-[40px] font-semibold text-[#1a3b5c] leading-tight mb-6 mt-1">

@@ -12,45 +12,60 @@ import {
   Clock,
   TrendingUp,
 } from "lucide-react";
-import img1 from "../assets/img1.png";
+import img1 from "../assets/img11.png";
 
 const About = () => {
   const coreValues = [
     {
       title: "Integrity",
       desc: "We prioritize honesty, transparent communication, and ethical accountability in all actions and business decisions.",
-      icon: <ShieldCheck className="w-6 h-6 text-white" />,
-      bgColor: "bg-blue-500",
+      icon: (
+        <ShieldCheck
+          className="w-[22px] h-[22px] text-white"
+          strokeWidth={1.5}
+        />
+      ),
     },
     {
       title: "Accountability",
       desc: "We implement structured tracking, monitoring, and communication processes to maintain clear and timely responsibility.",
-      icon: <ClipboardCheck className="w-6 h-6 text-white" />,
-      bgColor: "bg-purple-500",
+      icon: (
+        <ClipboardCheck
+          className="w-[22px] h-[22px] text-white"
+          strokeWidth={1.5}
+        />
+      ),
     },
     {
       title: "Professionalism",
       desc: "We maintain organized workflows and standardized communication in all our engagements.",
-      icon: <Briefcase className="w-6 h-6 text-white" />,
-      bgColor: "bg-orange-400",
+      icon: (
+        <Briefcase className="w-[22px] h-[22px] text-white" strokeWidth={1.5} />
+      ),
     },
     {
       title: "Quality Focus",
       desc: "We emphasize alignment with technical specifications and support assembly standards.",
-      icon: <Award className="w-6 h-6 text-white" />,
-      bgColor: "bg-red-500",
+      icon: (
+        <Award className="w-[22px] h-[22px] text-white" strokeWidth={1.5} />
+      ),
     },
     {
       title: "Reliability",
       desc: "We are committed to delivering on terms and delivery promises consistently and professionally.",
-      icon: <Clock className="w-6 h-6 text-white" />,
-      bgColor: "bg-pink-500",
+      icon: (
+        <Clock className="w-[22px] h-[22px] text-white" strokeWidth={1.5} />
+      ),
     },
     {
       title: "Continuous Improvement",
       desc: "We are committed to refining our processes and expanding our operational capabilities.",
-      icon: <TrendingUp className="w-6 h-6 text-white" />,
-      bgColor: "bg-green-500",
+      icon: (
+        <TrendingUp
+          className="w-[22px] h-[22px] text-white"
+          strokeWidth={1.5}
+        />
+      ),
     },
   ];
 
@@ -64,14 +79,14 @@ const About = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mt-8">
+      <section className="pt-12 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-[#bf714a] font-bold tracking-widest text-sm uppercase mb-4">
+            <h3 className="text-[#153B61] font-bold tracking-widest text-sm uppercase mb-4">
               About Us
             </h3>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium text-[#1a3b5c] leading-tight mb-6 mt-1">
@@ -139,7 +154,7 @@ const About = () => {
             <img
               src={img1}
               alt="Warehouse with shelves"
-              className="w-full h-auto object-cover object-center max-h-[450px]"
+              className="w-full max-w-[500px] h-auto rounded-lg shadow-sm object-cover"
             />
           </motion.div>
         </div>
@@ -153,15 +168,18 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-[#f8f9fa] rounded p-8 sm:p-10 border border-gray-100 flex flex-col items-start min-h-[220px]"
+            className="bg-[#f8fafc] rounded-md p-8 sm:p-10 border border-gray-200 flex flex-col items-start min-h-[240px] shadow-sm hover:shadow-md transition-shadow duration-300"
           >
-            <div className="w-10 h-10 bg-[#1a3b5c] rounded-full flex items-center justify-center mb-6">
-              <Target className="w-5 h-5 text-white" />
+            <div className="w-11 h-11 bg-[#153b61] rounded-full flex items-center justify-center mb-5">
+              <Target
+                className="w-[22px] h-[22px] text-white"
+                strokeWidth={1.5}
+              />
             </div>
-            <h3 className="text-[22px] font-semibold text-[#1a3b5c] mb-3">
+            <h3 className="text-[26px] font-medium text-[#153b61] mb-4">
               Our Mission
             </h3>
-            <p className="text-[#2b4c6e] text-[15px] leading-relaxed">
+            <p className="text-gray-500 text-[16px] leading-[1.8]">
               To deliver reliable, organized, and process-driven procurement and
               engineering support services that contribute to efficient project
               execution and operational stability.
@@ -173,15 +191,18 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-[#f8f9fa] rounded p-8 sm:p-10 border border-gray-100 flex flex-col items-start min-h-[220px]"
+            className="bg-[#f8fafc] rounded-md p-8 sm:p-10 border border-gray-200 flex flex-col items-start min-h-[240px] shadow-sm hover:shadow-md transition-shadow duration-300"
           >
-            <div className="w-10 h-10 bg-[#1a3b5c] rounded-full flex items-center justify-center mb-6">
-              <Lightbulb className="w-5 h-5 text-white" />
+            <div className="w-11 h-11 bg-[#153b61] rounded-full flex items-center justify-center mb-5">
+              <Lightbulb
+                className="w-[22px] h-[22px] text-white"
+                strokeWidth={1.5}
+              />
             </div>
-            <h3 className="text-[22px] font-semibold text-[#1a3b5c] mb-3">
+            <h3 className="text-[26px] font-medium text-[#153b61] mb-4">
               Our Vision
             </h3>
-            <p className="text-[#2b4c6e] text-[15px] leading-relaxed">
+            <p className="text-gray-500 text-[16px] leading-[1.8]">
               To become a trusted procurement-focused engineering support
               company recognized for structure, transparency, and professional
               service delivery.
@@ -208,17 +229,15 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-[#f8f9fa] bg-opacity-60 rounded-xl p-8 hover:bg-white hover:shadow-md transition-all duration-300"
+              className="bg-[#f8fafc] rounded-md p-8 sm:p-10 border border-gray-200 flex flex-col items-start min-h-[240px] shadow-sm hover:shadow-md transition-shadow duration-300"
             >
-              <div
-                className={`w-[42px] h-[42px] rounded-lg ${value.bgColor} flex items-center justify-center mb-6`}
-              >
+              <div className="w-11 h-11 bg-[#153b61] rounded-full flex items-center justify-center mb-5">
                 {value.icon}
               </div>
-              <h3 className="text-xl font-semibold text-[#1a3b5c] mb-4">
+              <h3 className="text-[26px] font-medium text-[#153b61] mb-4">
                 {value.title}
               </h3>
-              <p className="text-[#2b4c6e] text-[15px] leading-relaxed">
+              <p className="text-gray-500 text-[16px] leading-[1.8]">
                 {value.desc}
               </p>
             </motion.div>
