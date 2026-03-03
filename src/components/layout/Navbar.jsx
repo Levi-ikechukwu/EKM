@@ -37,10 +37,10 @@ export default function Navbar() {
       }}
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm"
+      className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm w-full"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-[76px] items-center">
+        <div className="flex justify-between h-[68px] sm:h-[76px] items-center">
           {/* Logo */}
           <div className="shrink-0 flex items-center">
             <Link to="/" onClick={() => setIsOpen(false)}>

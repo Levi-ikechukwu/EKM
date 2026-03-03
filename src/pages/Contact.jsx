@@ -31,25 +31,25 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-      // Create template parameters to match your form fields
-      const templateParams = {
-        to_name: "EKM Engineering", // This is who it's going to
-        from_name: formData.fullName,
-        company_name: formData.companyName,
-        phone_number: formData.phoneNumber,
-        reply_to: formData.emailAddress,
-        message: formData.message,
-      };
+      // Custom Native PHP Mail Script (Bypasses EmailJS, Hosted directly on Qservers)
+      const response = await fetch("/contact.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-      // EmailJS send function
-      const response = await emailjs.send(
-        "YOUR_SERVICE_ID", // REPLACE with your EmailJS Service ID
-        "YOUR_TEMPLATE_ID", // REPLACE with your EmailJS Template ID
-        templateParams,
-        "YOUR_PUBLIC_KEY", // REPLACE with your EmailJS Public Key
-      );
+      const responseText = await response.text();
+      let responseData = {};
+      try {
+        responseData = JSON.parse(responseText);
+      } catch (e) {
+        console.error("Non-JSON response received:", responseText);
+      }
 
-      if (response.status === 200) {
+      if (response.ok && responseData.status === "success") {
         setSubmitStatus("success");
         setFormData({
           fullName: "",
@@ -61,6 +61,7 @@ const Contact = () => {
         });
         setTimeout(() => setSubmitStatus(null), 5000); // clear success message after 5 seconds
       } else {
+        console.error("Server responded with error:", responseData);
         setSubmitStatus("error");
       }
     } catch (error) {
