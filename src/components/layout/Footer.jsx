@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-24">
           {/* Column 1: Company Info & Links */}
           <div className="flex flex-col">
-            <h4 className="text-[15px] font-semibold mb-6 tracking-wide">
+            <h4 className="text-[18px] font-semibold mb-6 tracking-wide">
               EKM Engineering Services Limited
             </h4>
             <p className="text-gray-200 text-[13px] leading-relaxed mb-6 max-w-sm pr-4">
@@ -66,7 +66,7 @@ export default function Footer() {
 
           {/* Column 2: Our Services */}
           <div className="flex flex-col">
-            <h4 className="text-[15px] font-semibold mb-6 tracking-wide">
+            <h4 className="text-[18px] font-semibold mb-6 tracking-wide">
               Our Services
             </h4>
             <ul className="space-y-3.5 text-[13px] font-medium text-gray-200">
@@ -139,7 +139,7 @@ export default function Footer() {
 
           {/* Column 3: Contact Us */}
           <div className="flex flex-col">
-            <h4 className="text-[15px] font-semibold mb-6 tracking-wide">
+            <h4 className="text-[18px] font-semibold mb-6 tracking-wide">
               Contact Us
             </h4>
             <ul className="space-y-4 text-[13px] font-medium text-gray-200 mb-8">

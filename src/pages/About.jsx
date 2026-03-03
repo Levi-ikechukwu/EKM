@@ -64,20 +64,20 @@ const About = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="pt-4 md:pt-8 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="pt-4 md:pt-36 pb-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <div className="max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-[#153B61] font-bold tracking-widest text-sm uppercase mb-4">
-              About Us
+            <h3 className="text-[#555555] font-bold tracking-widest text-sm uppercase mb-4">
+              About EKM
             </h3>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium text-[#1a3b5c] leading-tight mb-6 mt-1">
+            <h1 className="text-3xl sm:text-4xl md:text-2xl font-medium text-[#1a3b5c] leading-tight mb-6 mt-1">
               Engineering Procurement and Industrial Support Solutions
             </h1>
-            <p className="text-[#2b4c6e] text-base md:text-lg leading-relaxed mb-8 max-w-[850px] font-normal">
+            <p className="text-[#555555] text-base md:text-lg leading-relaxed mb-8 max-w-[850px] font-normal">
               EKM Engineering Services Limited is a procurement-focused
               engineering support company established to deliver organized,
               transparent, and process-driven industrial supply solutions. We
@@ -96,18 +96,18 @@ const About = () => {
       </section>
 
       {/* Who We Are Section */}
-      <section className="py-16 bg-white px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-center">
+      <section className="py-16 bg-white px-2 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-8 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-[32px] font-semibold text-[#1a3b5c] mb-8">
+            <h2 className="text-[34px] font-semibold text-[#1a3b5c] mb-5">
               Who We Are
             </h2>
-            <div className="space-y-6 text-[#2b4c6e] text-[16px] leading-[1.8]">
+            <div className="space-y-5 text-[#555555] text-[17px] leading-[1.3]">
               <p>
                 EKM Engineering Services Limited was established with a clear
                 objective to provide structured procurement and engineering
@@ -139,7 +139,7 @@ const About = () => {
             <img
               src={img1}
               alt="Warehouse with shelves"
-              className="w-full max-w-[500px] h-auto rounded-lg shadow-sm object-cover"
+              className="w-full max-w-[500px] h-auto  shadow-sm object-cover"
             />
           </motion.div>
         </div>

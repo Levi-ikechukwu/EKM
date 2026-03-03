@@ -75,7 +75,7 @@ const Contact = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Header Section */}
-      <section className="pt-4 md:pt-8 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="pt-4 md:pt-20 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -32,7 +32,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/40 to-black/10"></div>
 
       {/* Content Container */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10  sm:py-16 md:py-24 overflow-hidden">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-8 sm:pt-28 sm:pb-12 md:pt-40 md:pb-16 overflow-hidden">
         <motion.div
           className="w-full md:ml-10 lg:ml-20"
           variants={containerVariants}
@@ -41,17 +41,15 @@ export default function Hero() {
         >
           <motion.h1
             variants={itemVariants}
-            className="text-[28px] sm:text-3xl md:text-4xl lg:text-[44px] font-bold text-[#e2e8f0]/85 leading-[1.25] md:leading-[1.2] mb-4 md:mb-6 max-w-5xl"
+            className="text-[28px] sm:text-3xl md:text-4xl lg:text-[44px] font-bold text-white leading-none md:leading-none mb-3 md:mb-4 max-w-5xl"
           >
-            <span className="block mb-1 sm:mb-2 text-white">
-              Engineering Precision.
-            </span>
+            <span className="block text-white">Engineering Precision.</span>
             Strategic Procurement Reliable Delivery.
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
-            className="text-[16px] sm:text-[18px] md:text-[19px] text-[#cbd5e1] mb-8 md:mb-10 leading-[1.6] md:leading-relaxed font-light max-w-2xl"
+            className="text-[16px] sm:text-[18px] md:text-[19px] text-[#cbd5e1] mb-8 md:mb-10 leading-snug font-light max-w-2xl"
           >
             Providing end-to-end engineering procurement, technical sourcing,
             and industrial support services with a commitment to safety,
