@@ -47,7 +47,12 @@ export default function Navbar() {
               <img
                 src={Logo}
                 alt="EKM Engineering Services Limited"
-                className="h-12 sm:h-14 w-auto object-contain"
+                className="h-12 sm:h-14 w-auto transform transition-transform duration-300"
+                style={{
+                  imageRendering: "-webkit-optimize-contrast",
+                  transform: "translateZ(0)",
+                  backfaceVisibility: "hidden",
+                }}
               />
             </Link>
           </div>

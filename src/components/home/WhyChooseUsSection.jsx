@@ -11,10 +11,10 @@ export default function WhyChooseUsSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center max-w-4xl mx-auto mb-16"
         >
-          <h2 className="text-[#bf714a] font-bold tracking-widest text-lg sm:text-xl uppercase mb-6">
+          <h2 className="text-[#bf714a] font-bold tracking-widest text-lg sm:text-xl uppercase mb-4">
             Why Choose EKM
           </h2>
-          <p className="text-gray-600 text-base md:text-[17px] leading-relaxed mx-auto max-w-3xl">
+          <p className="text-gray-600 text-base md:text-[17px] leading-relaxed mx-auto font-medium max-w-5xl">
             At EKM Engineering Services Limited, our procurement operations are
             structured around <br className="hidden md:block" />
             discipline, traceability, and vendor reliability. We implement

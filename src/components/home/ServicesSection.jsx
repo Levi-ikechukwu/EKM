@@ -54,7 +54,7 @@ export default function ServicesSection() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gray-50 w-full overflow-hidden">
+    <section className="py-16 md:py-10 bg-gray-50 w-full overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -63,7 +63,7 @@ export default function ServicesSection() {
           transition={{ duration: 0.8 }}
           className="text-center max-w-4xl mx-auto mb-16"
         >
-          <h2 className="text-[#bf714a] font-bold tracking-widest text-lg sm:text-xl md:text-2xl uppercase mb-4">
+          <h2 className="text-[#bf714a] font-bold tracking-widest text-lg sm:text-xl md:text-xl uppercase mb-4">
             Our Core Service Areas
           </h2>
           <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-medium text-[#1a3b5c] leading-tight">
@@ -92,7 +92,7 @@ export default function ServicesSection() {
               key={idx}
               variants={cardVariants}
               whileHover={{ y: -8 }}
-              className="flex flex-col text-center group cursor-pointer w-full max-w-[450px] mx-auto"
+              className="flex flex-col text-center group cursor-pointer w-full max-w-[550px] mx-auto"
             >
               <div className="overflow-hidden rounded-md mb-6 shadow-sm group-hover:shadow-md transition-shadow duration-300">
                 <motion.img
@@ -103,10 +103,10 @@ export default function ServicesSection() {
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <h4 className="text-[20px] md:text-[22px] font-semibold text-[#1a3b5c] mb-3 md:mb-4 px-2 group-hover:text-[#2b4c6e] transition-colors duration-300">
+              <h4 className="text-[20px] md:text-[18px] font-semibold text-[#1a3b5c] mb-3 md:mb-4 px-2 group-hover:text-[#2b4c6e] transition-colors duration-300">
                 {service.title}
               </h4>
-              <p className="text-[#2b4c6e] text-[15px] md:text-[16px] leading-relaxed px-4 md:px-6">
+              <p className="text-[#2b4c6e] text-[15px] md:text-[14px] leading-tight font-medium px-4 md:px-6">
                 {service.desc}
               </p>
             </motion.div>

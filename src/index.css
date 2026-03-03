@@ -3,7 +3,7 @@
 
 @layer base {
   :root {
-    --background: #ffffff; /* pure white background */
+    --background: #fafcff; /* Tinted off-white background */
     --foreground: #0f172a; /* slate-900 for default text */
     --primary: #1e3a8a; /* deep blue for enterprise brand */
     --primary-foreground: #ffffff;
