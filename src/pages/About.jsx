@@ -13,59 +13,44 @@ import {
   TrendingUp,
 } from "lucide-react";
 import img1 from "../assets/img11.png";
+import logo1 from "../assets/logo1.png";
+import logo2 from "../assets/logo2.png";
+import logo3 from "../assets/logo3.png";
+import logo4 from "../assets/logo4.png";
+import logo5 from "../assets/logo5.png";
+import logo6 from "../assets/logo6.png";
 
 const About = () => {
   const coreValues = [
     {
       title: "Integrity",
       desc: "We prioritize honesty, transparent communication, and ethical accountability in all actions and business decisions.",
-      icon: (
-        <ShieldCheck
-          className="w-[22px] h-[22px] text-white"
-          strokeWidth={1.5}
-        />
-      ),
+      icon: logo1,
     },
     {
       title: "Accountability",
       desc: "We implement structured tracking, monitoring, and communication processes to maintain clear and timely responsibility.",
-      icon: (
-        <ClipboardCheck
-          className="w-[22px] h-[22px] text-white"
-          strokeWidth={1.5}
-        />
-      ),
+      icon: logo2,
     },
     {
       title: "Professionalism",
       desc: "We maintain organized workflows and standardized communication in all our engagements.",
-      icon: (
-        <Briefcase className="w-[22px] h-[22px] text-white" strokeWidth={1.5} />
-      ),
+      icon: logo3,
     },
     {
       title: "Quality Focus",
       desc: "We emphasize alignment with technical specifications and support assembly standards.",
-      icon: (
-        <Award className="w-[22px] h-[22px] text-white" strokeWidth={1.5} />
-      ),
+      icon: logo4,
     },
     {
       title: "Reliability",
       desc: "We are committed to delivering on terms and delivery promises consistently and professionally.",
-      icon: (
-        <Clock className="w-[22px] h-[22px] text-white" strokeWidth={1.5} />
-      ),
+      icon: logo5,
     },
     {
       title: "Continuous Improvement",
       desc: "We are committed to refining our processes and expanding our operational capabilities.",
-      icon: (
-        <TrendingUp
-          className="w-[22px] h-[22px] text-white"
-          strokeWidth={1.5}
-        />
-      ),
+      icon: logo6,
     },
   ];
 
@@ -79,7 +64,7 @@ const About = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="pt-12 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="pt-4 md:pt-8 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -161,14 +146,14 @@ const About = () => {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-[#f8fafc] rounded-md p-8 sm:p-10 border border-gray-200 flex flex-col items-start min-h-[240px] shadow-sm hover:shadow-md transition-shadow duration-300"
+            className="bg-[#f8fafc] rounded-md p-6 sm:p-8 border border-gray-200 flex flex-col items-start h-full shadow-sm hover:shadow-md transition-shadow duration-300"
           >
             <div className="w-11 h-11 bg-[#153b61] rounded-full flex items-center justify-center mb-5">
               <Target
@@ -191,7 +176,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-[#f8fafc] rounded-md p-8 sm:p-10 border border-gray-200 flex flex-col items-start min-h-[240px] shadow-sm hover:shadow-md transition-shadow duration-300"
+            className="bg-[#f8fafc] rounded-md p-6 sm:p-8 border border-gray-200 flex flex-col items-start h-full shadow-sm hover:shadow-md transition-shadow duration-300"
           >
             <div className="w-11 h-11 bg-[#153b61] rounded-full flex items-center justify-center mb-5">
               <Lightbulb
@@ -212,8 +197,8 @@ const About = () => {
       </section>
 
       {/* Core Values Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="flex justify-center mb-16">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="flex justify-center mb-8">
           <div className="bg-[#cbd5e1] px-10 py-3.5 rounded-full">
             <h2 className="text-[22px] font-semibold text-[#1a3b5c]">
               Our Core Values
@@ -229,15 +214,17 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-[#f8fafc] rounded-md p-8 sm:p-10 border border-gray-200 flex flex-col items-start min-h-[240px] shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="bg-[#f8fafc] rounded-md p-6 sm:p-8 border border-gray-200 flex flex-col items-start h-full shadow-sm hover:shadow-md transition-shadow duration-300"
             >
-              <div className="w-11 h-11 bg-[#153b61] rounded-full flex items-center justify-center mb-5">
-                {value.icon}
-              </div>
-              <h3 className="text-[26px] font-medium text-[#153b61] mb-4">
+              <img
+                src={value.icon}
+                alt={value.title}
+                className="w-12 h-12 object-contain mb-5"
+              />
+              <h3 className="text-[24px] font-medium text-[#153b61] mb-3">
                 {value.title}
               </h3>
-              <p className="text-gray-500 text-[16px] leading-[1.8]">
+              <p className="text-gray-500 text-[15px] leading-[1.8]">
                 {value.desc}
               </p>
             </motion.div>
@@ -246,7 +233,7 @@ const About = () => {
       </section>
 
       {/* Approach Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 lg:gap-24 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}

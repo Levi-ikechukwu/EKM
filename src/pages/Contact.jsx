@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { MapPin, Mail, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -30,26 +31,25 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: "YOUR_WEB3FORMS_ACCESS_KEY", // Replace with actual access key from web3forms.com
-          name: formData.fullName,
-          company: formData.companyName,
-          phone: formData.phoneNumber,
-          email: formData.emailAddress,
-          message: formData.message,
-          subject: "New Contact Form Submission - EKM Website",
-          from_name: "EKM Contact Form",
-        }),
-      });
+      // Create template parameters to match your form fields
+      const templateParams = {
+        to_name: "EKM Engineering", // This is who it's going to
+        from_name: formData.fullName,
+        company_name: formData.companyName,
+        phone_number: formData.phoneNumber,
+        reply_to: formData.emailAddress,
+        message: formData.message,
+      };
 
-      const result = await response.json();
-      if (result.success) {
+      // EmailJS send function
+      const response = await emailjs.send(
+        "YOUR_SERVICE_ID", // REPLACE with your EmailJS Service ID
+        "YOUR_TEMPLATE_ID", // REPLACE with your EmailJS Template ID
+        templateParams,
+        "YOUR_PUBLIC_KEY", // REPLACE with your EmailJS Public Key
+      );
+
+      if (response.status === 200) {
         setSubmitStatus("success");
         setFormData({
           fullName: "",
@@ -74,7 +74,7 @@ const Contact = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Header Section */}
-      <section className="pt-12 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="pt-4 md:pt-8 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

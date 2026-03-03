@@ -137,9 +137,9 @@ export default function ServicesList() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8 }}
-        className="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-[#1a3b5c]"
+        className="pt-8 pb-16 md:pt-12 md:pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-[#1a3b5c]"
       >
-        <h3 className="text-[#bf714a] font-bold tracking-widest text-sm uppercase mb-3">
+        <h3 className="text-[#153B61] font-bold tracking-widest text-sm uppercase mb-3">
           Our Services
         </h3>
         <h2 className="text-3xl sm:text-4xl md:text-[40px] font-medium leading-tight mb-8">
