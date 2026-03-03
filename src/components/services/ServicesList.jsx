@@ -227,7 +227,7 @@ export default function ServicesList() {
         <h3 className="text-[#bf714a] font-bold tracking-widest text-lg sm:text-xl md:text-2xl mb-4">
           Let's Support Your Next Project
         </h3>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium text-[#1a3b5c] leading-tight mb-8">
+        <h2 className="text-2xl sm:text-3xl md:text-2xl font-medium text-[#1a3b5c] leading-tight mb-8">
           Speak with our team to discuss your procurement and engineering
           support requirements.
         </h2>
