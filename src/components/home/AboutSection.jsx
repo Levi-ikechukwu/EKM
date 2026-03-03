@@ -1,4 +1,4 @@
-import AboutImage from "../../assets/About.png";
+import AboutImage from "../../assets/About.webp";
 import { motion } from "framer-motion";
 
 export default function AboutSection() {

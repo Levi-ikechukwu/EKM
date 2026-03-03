@@ -12,7 +12,7 @@ import {
   Clock,
   TrendingUp,
 } from "lucide-react";
-import img1 from "../assets/img11.png";
+import img1 from "../assets/img11.webp";
 import logo1 from "../assets/logo1.png";
 import logo2 from "../assets/logo2.png";
 import logo3 from "../assets/logo3.png";

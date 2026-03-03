@@ -1,4 +1,4 @@
-import HeroImage from "../../assets/Hero.png";
+import HeroImage from "../../assets/Hero.webp";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 

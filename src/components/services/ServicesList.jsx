@@ -1,12 +1,12 @@
 import React from "react";
-import service1 from "../../assets/service1.png";
-import service2 from "../../assets/service2.png";
-import service3 from "../../assets/service3.png";
-import service4 from "../../assets/service4.png";
-import service5 from "../../assets/service5.png";
-import service6 from "../../assets/service6.png";
-import service7 from "../../assets/service7.png";
-import service8 from "../../assets/service8.png";
+import service1 from "../../assets/service1.webp";
+import service2 from "../../assets/service2.webp";
+import service3 from "../../assets/service3.webp";
+import service4 from "../../assets/service4.webp";
+import service5 from "../../assets/service5.webp";
+import service6 from "../../assets/service6.webp";
+import service7 from "../../assets/service7.webp";
+import service8 from "../../assets/service8.webp";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 

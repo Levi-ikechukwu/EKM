@@ -1,9 +1,9 @@
-import img1 from "../../assets/img1.png";
-import img2 from "../../assets/img2.png";
-import imgAbout from "../../assets/About1.png";
-import img3 from "../../assets/img3.png";
-import img4 from "../../assets/img4.png";
-import img55 from "../../assets/img55.png";
+import img1 from "../../assets/img1.webp";
+import img2 from "../../assets/img2.webp";
+import imgAbout from "../../assets/About1.webp";
+import img3 from "../../assets/img3.webp";
+import img4 from "../../assets/img4.webp";
+import img55 from "../../assets/img55.webp";
 import { motion } from "framer-motion";
 
 export default function ServicesSection() {
