@@ -13,7 +13,7 @@ export default function TrustBar() {
           <div key={index} className="flex items-center">
             {/* Checkmark Icon */}
             <svg
-              className="w-4 h-4 mr-1.5 text-[#333333] shrink-0"
+              className="w-[18px] h-[18px] mr-2 text-[#333333] shrink-0"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -28,7 +28,7 @@ export default function TrustBar() {
             </svg>
 
             {/* Text */}
-            <span className="text-[#1a3b5c] font-medium text-[11px] sm:text-[13px] lg:text-[14px]">
+            <span className="text-[#1a3b5c] font-medium text-[13px] sm:text-[14px] lg:text-[15px]">
               {item}
             </span>
 
