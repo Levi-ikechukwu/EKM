@@ -137,12 +137,12 @@ export default function ServicesList() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8 }}
-        className="pt-20 pb-16 md:pt-28 md:pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-[#1a3b5c]"
+        className="pt-8 pb-16 md:pt-28 md:pb-24 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 text-center text-[#1a3b5c]"
       >
         <h3 className="text-[#BF774E] font-bold tracking-widest text-sm uppercase mb-3">
           Our Services
         </h3>
-        <h2 className="text-3xl sm:text-4xl md:text-[34px] font-medium leading-tight mb-8">
+        <h2 className="text-[26px] sm:text-4xl md:text-[34px] font-medium leading-tight mb-6 md:mb-8 w-full">
           Engineering Procurement and Industrial Support Services
         </h2>
         <p className="text-base md:text-lg leading-relaxed max-w-5xl mx-auto text-[#2b4c6e]">
