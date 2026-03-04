@@ -1,5 +1,6 @@
 import AboutImage from "../../assets/About.webp";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function AboutSection() {
   const points = [
@@ -91,13 +92,18 @@ export default function AboutSection() {
 
             {/* Button */}
             <div>
-              <motion.button
+              <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-2.5 bg-[#1a3b5c] hover:bg-[#122a42] text-white font-medium rounded transition-colors duration-300 shadow hover:shadow-lg text-[13px]"
+                className="inline-block"
               >
-                View Our Services
-              </motion.button>
+                <Link
+                  to="/services"
+                  className="inline-block px-6 py-2.5 bg-[#1a3b5c] hover:bg-[#122a42] text-white font-medium rounded transition-colors duration-300 shadow hover:shadow-lg text-[13px]"
+                >
+                  View Our Services
+                </Link>
+              </motion.div>
             </div>
           </motion.div>
 

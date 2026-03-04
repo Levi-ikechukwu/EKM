@@ -32,7 +32,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/40 to-black/10"></div>
 
       {/* Content Container */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-8 sm:pt-28 sm:pb-12 md:pt-40 md:pb-16 overflow-hidden">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 sm:pt-32 sm:pb-16 md:pt-40 md:pb-16 overflow-hidden">
         <motion.div
           className="w-full md:ml-10 lg:ml-20"
           variants={containerVariants}
