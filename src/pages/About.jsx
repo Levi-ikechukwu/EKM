@@ -24,32 +24,32 @@ const About = () => {
   const coreValues = [
     {
       title: "Integrity",
-      desc: "We prioritize honesty, transparent communication, and ethical accountability in all actions and business decisions.",
+      desc: "We maintain transparency and ethical conduct in all procurement activities, supplier engagements, and project interactions.",
       icon: logo1,
     },
     {
       title: "Accountability",
-      desc: "We implement structured tracking, monitoring, and communication processes to maintain clear and timely responsibility.",
+      desc: "We maintain organized workflows, structured communication channels, and disciplined operational procedures.",
       icon: logo2,
     },
     {
       title: "Professionalism",
-      desc: "We maintain organized workflows and standardized communication in all our engagements.",
+      desc: "We maintain organized workflows, structured communication channels, and disciplined operational procedures.",
       icon: logo3,
     },
     {
       title: "Quality Focus",
-      desc: "We emphasize alignment with technical specifications and support assembly standards.",
+      desc: "Maintained through strict attention to technical specifications, documentation verification, and supplier evaluation processes",
       icon: logo4,
     },
     {
       title: "Reliability",
-      desc: "We are committed to delivering on terms and delivery promises consistently and professionally.",
+      desc: " We are committed to coordinating sourcing and delivery processes efficiently, ensuring we meet project timelines without fail.",
       icon: logo5,
     },
     {
-      title: "Continuous Improvement",
-      desc: "We are committed to refining our processes and expanding our operational capabilities.",
+      title: "Safety",
+      desc: " We are committed to a Target Zero philosophy, ensuring that every procurement and logistics activity is conducted with absolute regard for the health of our people and the protection of the environment",
       icon: logo6,
     },
   ];
@@ -109,23 +109,34 @@ const About = () => {
             </h2>
             <div className="space-y-5 text-[#555555] text-[17px] leading-[1.3]">
               <p>
-                EKM Engineering Services Limited was established with a clear
-                objective to provide structured procurement and engineering
-                support services tailored to industrial and project-based
-                environments.
+                EKM Engineering Services Limited is an indigenous Nigerian
+                engineering procurement and industrial support company
+                established to deliver structured sourcing, supply chain
+                coordination, and technical support services for industrial and
+                project-driven environments.
               </p>
               <p>
-                Our approach is centered on organization, supplier coordination,
-                documentation management, and delivery monitoring. We are
-                building a procurement framework designed to support
-                transparency, accountability, and operational efficiency across
-                all service engagements.
+                The company operates with a procurement-focused approach
+                designed to support engineering, construction, and industrial
+                projects through organized sourcing systems, vendor
+                coordination, documentation control, and supply chain
+                monitoring. Beyond simple sourcing, EKM manages Technical
+                Integrity by providing Technical Bid Evaluation (TBE) to ensure
+                that high-pressure valves, rotating equipment, and electrical
+                components meet API, ASME, and IEC standards. Our services are
+                built around transparency, accountability, and disciplined
+                operational processes that enable clients to execute projects
+                efficiently while maintaining 100% quality and compliance
+                standards.
               </p>
               <p>
-                As a growing company, our focus is on developing strong supplier
-                relationships, implementing structured workflows, and
-                positioning ourselves as support compliance-aligned procurement
-                practices within regulated industries.
+                EKM was established to mitigate technical and commercial risks
+                associated with procurement inefficiencies and unreliable
+                sourcing channels. Through a structured operational framework,
+                the company provides organized procurement and technical support
+                services that enable project stakeholders to focus on execution
+                while supply requirements are managed with precision and
+                reliability
               </p>
             </div>
           </motion.div>
@@ -139,7 +150,7 @@ const About = () => {
             <img
               src={img1}
               alt="Warehouse with shelves"
-              className="w-full max-w-[500px] h-auto  shadow-sm object-cover"
+              className="w-full max-w-[500px] h-[590px] mt-14 shadow-sm object-cover"
             />
           </motion.div>
         </div>
@@ -165,9 +176,11 @@ const About = () => {
               Our Mission
             </h3>
             <p className="text-gray-500 text-[16px] leading-[1.8]">
-              To deliver reliable, organized, and process-driven procurement and
-              engineering support services that contribute to efficient project
-              execution and operational stability.
+              To deliver structured engineering procurement and industrial
+              support solutions through efficient sourcing systems, disciplined
+              supply chain coordination, and professional project support
+              services that contribute to successful project execution with a
+              Target Zero (Zero LTI) safety philosophy
             </p>
           </motion.div>
 
@@ -188,9 +201,10 @@ const About = () => {
               Our Vision
             </h3>
             <p className="text-gray-500 text-[16px] leading-[1.8]">
-              To become a trusted procurement-focused engineering support
-              company recognized for structure, transparency, and professional
-              service delivery.
+              To become the most trusted engineering procurement and industrial
+              support partner in Nigeria and West Africa, recognized for
+              operational discipline, transparency, and absolute compliance with
+              Nigerian Content and International Safety Standards.
             </p>
           </motion.div>
         </div>

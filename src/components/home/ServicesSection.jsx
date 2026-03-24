@@ -3,7 +3,7 @@ import img2 from "../../assets/img2.webp";
 import imgAbout from "../../assets/About1.webp";
 import img3 from "../../assets/img3.webp";
 import img4 from "../../assets/img4.webp";
-import img55 from "../../assets/img55.webp";
+import img55 from "../../assets/image55.webp";
 import { motion } from "framer-motion";
 
 export default function ServicesSection() {

@@ -48,11 +48,19 @@ export default function AboutSection() {
             </h2>
 
             <p className="text-gray-500 text-[13.5px] md:text-[14.5px] leading-relaxed mb-6 pr-4 lg:pr-8">
-              EKM Engineering Services Limited is a procurement-driven
-              engineering firm providing end-to-end supply chain, vendor
-              sourcing, and technical support solutions for industrial and
-              energy sectors. We are committed to compliance, operational
-              excellence, and delivering quality on every project.
+              EKM Engineering Services Limited was incorporated in Nigeria (RC
+              1822379) with the objective of providing organized engineering
+              procurement and industrial support services for companies
+              operating in project-based and industrial sectors. The company was
+              founded in response to the growing need for reliable procurement
+              coordination within engineering and construction environments.
+              Many projects experience delays or cost overruns due to fragmented
+              sourcing systems and inadequate documentation control. EKM bridges
+              this gap by providing a structured equipment procurement support
+              framework that improves efficiency and accountability. From its
+              inception, the company has focused on developing systems that
+              enable transparency while ensuring materials and technical
+              supplies meet required international standards.
             </p>
 
             {/* Checkmarks Grid */}

@@ -205,7 +205,7 @@ const PrivacyPolicy = () => {
                 </p>
                 <p>Phone: +23490494578</p>
                 <p>
-                  Address: 7C Rumuovuori Road, Off Mini Road Ada George, Port
+                  Address: 20 Rumuevuorlu Road, Off Mini Road Ada George, Port
                   Harcourt, Rivers State.
                 </p>
               </div>

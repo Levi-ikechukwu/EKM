@@ -49,7 +49,7 @@ export default function Hero() {
 
           <motion.p
             variants={itemVariants}
-            className="text-[16px] sm:text-[18px] md:text-[19px] text-[#cbd5e1] mb-8 md:mb-10 leading-snug font-light max-w-2xl"
+            className="text-[16px] sm:text-[18px] md:text-[19px] text-[#cbd5e1] mb-8 md:mb-10 leading-snug font-medium max-w-2xl"
           >
             Providing end-to-end engineering procurement, technical sourcing,
             and industrial support services with a commitment to safety,
